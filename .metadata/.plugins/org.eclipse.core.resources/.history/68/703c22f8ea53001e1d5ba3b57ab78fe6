@@ -119,24 +119,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  clearAllClock();
-	  	  for(int hour=0; hour<12;hour++){
-	  		  setNumberOnClock(hour);
-	  		  for(int minute=0; minute<12;minute++){
-	  			  setNumberOnClock(minute);
-	  			  int five = 5;
-	  			  while(five--){
-	  				  for(int second=0; second<12;second++){
-	  				  setNumberOnClock(second);
-	  				  HAL_Delay(5000);
-	  				  if((second != minute) && (second != hour))
-	  					  clearNumberOnClock(second);
-	  				  }
-	  			  }
-	  			  if(minute != hour)
-	  				  clearNumberOnClock(minute);
-	  		  }
-	  		  clearNumberOnClock(hour);
-	  	  }
 
     /* USER CODE BEGIN 3 */
   }
