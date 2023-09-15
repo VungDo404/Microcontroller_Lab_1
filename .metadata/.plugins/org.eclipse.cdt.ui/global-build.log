@@ -1,6 +1,9 @@
-00:09:45 **** Incremental Build of configuration Debug for project Source ****
+00:10:45 **** Incremental Build of configuration Debug for project Source ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:110:8: warning: 'clearNumberOnClock' defined but not used [-Wunused-function]
+  110 |   void clearNumberOnClock(int num){
+      |        ^~~~~~~~~~~~~~~~~~
 ../Core/Src/main.c:107:8: warning: 'setNumberOnClock' defined but not used [-Wunused-function]
   107 |   void setNumberOnClock(int num){
       |        ^~~~~~~~~~~~~~~~
