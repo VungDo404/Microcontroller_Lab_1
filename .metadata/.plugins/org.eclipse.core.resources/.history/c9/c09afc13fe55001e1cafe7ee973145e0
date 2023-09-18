@@ -196,7 +196,7 @@ int main(void)
       }
       int counter = 0;
       int currentState = 0;
-      int num = 5;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -243,7 +243,6 @@ int main(void)
 	  		HAL_GPIO_WritePin(LED_GREEN_VERT_GPIO_Port, LED_GREEN_VERT_Pin, RESET);
 	  		HAL_GPIO_WritePin(LED_RED_HORI_GPIO_Port, LED_RED_HORI_Pin, RESET);
 	  		counter++;
-	  		display7SEG(num--);
 	  		if(counter >= 3){
 	  			currentState++;
 	  			counter = 0;
@@ -254,9 +253,7 @@ int main(void)
 	  		    HAL_GPIO_WritePin(LED_YELLOW_VERT_GPIO_Port, LED_YELLOW_VERT_Pin, RESET);
 				HAL_GPIO_WritePin(LED_RED_HORI_GPIO_Port, LED_RED_HORI_Pin, RESET);
 				counter++;
-				display7SEG(num--);
-				if(counter == 2){
-					num = 3;
+				if(counter == 1){
 					currentState++;
 					counter = 0;
 
@@ -268,9 +265,7 @@ int main(void)
 	  		HAL_GPIO_WritePin(LED_RED_VERT_GPIO_Port, LED_RED_VERT_Pin, RESET);
 	  		HAL_GPIO_WritePin(LED_GREEN_HORI_GPIO_Port, LED_GREEN_HORI_Pin, RESET);
 	  		counter++;
-	  		display7SEG(num--);
-	  		if(counter == 3){
-	  			num = 2;
+	  		if(counter == 2){
 	  			currentState++;
 	  			counter = 0;
 
@@ -282,9 +277,7 @@ int main(void)
 	  		HAL_GPIO_WritePin(LED_RED_VERT_GPIO_Port, LED_RED_VERT_Pin, RESET);
 			HAL_GPIO_WritePin(LED_YELLOW_HORI_GPIO_Port, LED_YELLOW_HORI_Pin, RESET);
 			counter++;
-			display7SEG(num--);
-			if(counter == 2){
-				num = 5;
+			if(counter == 1){
 				currentState = 0;
 				counter = 0;
 			}

@@ -1,4 +1,4 @@
-23:51:05 **** Incremental Build of configuration Debug for project Source ****
+15:41:43 **** Incremental Build of configuration Debug for project Source ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "Source.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\LAB1\Source\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Source.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -8,7 +8,7 @@ arm-none-eabi-size   Source.elf
 arm-none-eabi-objdump -h -S  Source.elf  > "Source.list"
 arm-none-eabi-objcopy  -O ihex  Source.elf  "Source.hex"
    text	   data	    bss	    dec	    hex	filename
-   5804	     20	   1572	   7396	   1ce4	Source.elf
+   5896	     20	   1572	   7488	   1d40	Source.elf
 arm-none-eabi-objcopy  -O binary  Source.elf  "Source.bin"
 Finished building: default.size.stdout
  
@@ -19,5 +19,5 @@ Finished building: Source.list
  
  
 
-23:51:05 Build Finished. 0 errors, 0 warnings. (took 659ms)
+15:41:44 Build Finished. 0 errors, 0 warnings. (took 536ms)
 
