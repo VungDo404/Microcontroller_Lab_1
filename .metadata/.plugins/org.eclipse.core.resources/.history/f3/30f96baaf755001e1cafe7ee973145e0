@@ -120,6 +120,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  clearAllClock();
 //	  	  for(int hour=0; hour<12;hour++){
 //	  		  setNumberOnClock(hour);
 //	  		  for(int minute=0; minute<12;minute++){
@@ -153,7 +154,6 @@ int main(void)
 	  setNumberOnClock(second/5);
 	  setNumberOnClock(minute/5);
 	  setNumberOnClock(hour%12);
-	  second++;
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
