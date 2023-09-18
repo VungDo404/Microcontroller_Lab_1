@@ -1,17 +1,6 @@
-14:49:10 **** Incremental Build of configuration Debug for project Source ****
+17:32:18 **** Incremental Build of configuration Debug for project Source ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:142:12: warning: statement with no effect [-Wunused-value]
-  142 |     second == 0;
-      |     ~~~~~~~^~~~
-../Core/Src/main.c:146:15: warning: statement with no effect [-Wunused-value]
-  146 |        minute == 0;
-      |        ~~~~~~~^~~~
-../Core/Src/main.c:150:13: warning: statement with no effect [-Wunused-value]
-  150 |        hour == 0;
-      |        ~~~~~^~~~
-At top level:
 ../Core/Src/main.c:110:8: warning: 'clearNumberOnClock' defined but not used [-Wunused-function]
   110 |   void clearNumberOnClock(int num){
       |        ^~~~~~~~~~~~~~~~~~
@@ -22,13 +11,13 @@ arm-none-eabi-size   Source.elf
 arm-none-eabi-objdump -h -S  Source.elf  > "Source.list"
 arm-none-eabi-objcopy  -O ihex  Source.elf  "Source.hex"
    text	   data	    bss	    dec	    hex	filename
-   4812	     20	   1572	   6404	   1904	Source.elf
+   4832	     20	   1572	   6424	   1918	Source.elf
 arm-none-eabi-objcopy  -O binary  Source.elf  "Source.bin"
 Finished building: default.size.stdout
  
 Finished building: Source.hex
 Finished building: Source.bin
-Finished building: Source.list
  
+Finished building: Source.list
  
  
