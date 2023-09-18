@@ -232,8 +232,8 @@ int main(void)
  8000242:	69fb      	ldr	r3, [r7, #28]
  8000244:	3301      	adds	r3, #1
  8000246:	61fb      	str	r3, [r7, #28]
-	  HAL_Delay(500);
- 8000248:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
+	  HAL_Delay(1000);
+ 8000248:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  800024c:	f000 f97c 	bl	8000548 <HAL_Delay>
 	  if(second == 60){
  8000250:	e7b5      	b.n	80001be <main+0x36>
